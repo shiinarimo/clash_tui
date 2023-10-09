@@ -7,19 +7,20 @@ import requests
 import psutil
 from time import sleep
 
-clash_config='/home/%s/.config/clash/config.yaml'%getuser()
+# clash_config='/home/%s/.config/clash/config.yaml'%getuser()
 # Linux用户无需修改, Termux用户请填写: /data/data/com.termux/files/home/.config/clash/config.yaml
+clash_config='/data/data/com.termux/files/home/.config/clash/config.yaml'%getuser()
 
-self_config='./我的配置/'
+self_config='/storage/emulated/clash/'
 # 此为存放clash配置及用户数据的路径, 请在最后加/
 
-start_clash='clash'
+start_clash='/storage/emulated/clash/clash'
 # 此为启动clash的指令, Linux用户请填写clash内核可执行文件的绝对路径
 
 editor='micro'
 # 编辑配置文件时使用的编辑器
 
-raw_number=5
+raw_number=3
 # 此为一行输出的信息长度, Termux用户可改为3
 
 # 美观输出列表
